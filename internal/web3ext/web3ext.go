@@ -79,6 +79,12 @@ web3._extend({
 			params: 1,
 			inputFormatter: [null]
 		}),
+		new web3._extend.Method({
+			name: 'dumpBlock',
+			call: 'eth_dumpBlock',
+			params: 3,
+			inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter, web3._extend.formatters.inputBlockNumberFormatter, null],
+		}),
 	],
 	properties: [
 		new web3._extend.Property({
